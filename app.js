@@ -1,3 +1,24 @@
+
+// |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+// EOS EVM Mainnet
+// Add Chain
+
+function connectToEOSEVM_M() {
+  console.log("Coming Soon!");
+  }     
+
+// Add Token Logo
+
+
+
+
+// _________________________________________________________________________________________________________
+
+// EOS EVM Testnet
+
+// Add Chain
+
 function connectToEOSEVM_T() {
             if (typeof window.ethereum == 'undefined') {
                 alert('MetaMask is not installed!');
@@ -7,6 +28,7 @@ function connectToEOSEVM_T() {
                 const chain = {
                     chainId: "0x3cc4",
                     chainName: "EOSEVM Testnet v0.2",
+                    iconUrls: ["https://antelope.io/wp-content/uploads/2022/09/Antelope-Logo.svg"],
                     nativeCurrency: {
                         name: "EOS",
                         symbol: "EOS",
@@ -20,12 +42,58 @@ function connectToEOSEVM_T() {
                     params: [chain],
                 }).catch((error) => {
                     console.log(error);
-                    alert("An error has occurred. Please make sure MetaMask is ready to go. Also you may already have EOS EVM Testnet configured. See error in log");
+                    alert("An error has occurred. Please make sure MetaMask is ready to go. Also you may already have EOS EVM Testnet configured.");
                 });
             }
+
+
         }
 
-      
+        
+        // Add Token Logo
+
+        window.onload = function () {
+          const AddLogo_EOS_T = document.getElementById('AddLogo_EOS_T');
+        
+
+          AddLogo_EOS_T.addEventListener('click', async () => {
+          const tokenAddress = '0xd00981105e61274c8a5cd5a88fe7e037d935b514';
+          const tokenSymbol = 'EOS';
+          const tokenDecimals = 18;
+          const tokenImage = 'https://polygon.technology/_nuxt/img/polygon-logo-white-2023.1ce1033.svg';
+        
+          try {
+            // wasAdded is a boolean. Like any RPC method, an error may be thrown.
+            const wasAdded = await ethereum.request({
+              method: 'wallet_watchAsset',
+              params: {
+                type: 'ERC20', // Initially only supports ERC20, but eventually more!
+                options: {
+                  address: tokenAddress, // The address that the token is at.
+                  symbol: tokenSymbol, // A ticker symbol or shorthand, up to 5 chars.
+                  decimals: tokenDecimals, // The number of decimals in the token
+                  image: tokenImage, // A string url of the token logo
+                },
+              },
+            });
+        
+            if (wasAdded) {
+              console.log('Thanks for your interest!');
+            } else {
+              console.log('Your loss!');
+            }
+          } catch (error) {
+            console.log(error);
+          }
+        });
+      }
+
+
+// |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+      // TELOS EVM Mainnet
+      // Add Chain
+
       function connectToTELOSEVM_T() {
             if (typeof window.ethereum == 'undefined') {
                 alert('MetaMask is not installed!');
@@ -35,6 +103,7 @@ function connectToEOSEVM_T() {
                 const chain = {
                     chainId: "0x29",
                     chainName: "TelosEVM Testnet",
+                    iconUrls: ["https://antelope.io/wp-content/uploads/2022/09/Antelope-Logo.svg"],
                     nativeCurrency: {
                         name: "TELOS",
                         symbol: "TELOS",
@@ -48,10 +117,55 @@ function connectToEOSEVM_T() {
                     params: [chain],
                 }).catch((error) => {
                     console.log(error);
-                    alert("An error has occurred. Please make sure MetaMask is ready to go. Also you may already have Telos EVM Testnet configured. See error in log");
+                    alert("An error has occurred. Please make sure MetaMask is ready to go. Also you may already have Telos EVM Testnet configured.");
                 });
             }
         }
+
+
+        // Add Token Logo
+
+        window.onload = function () {
+          const AddLogo_TLOS_M = document.getElementById('AddLogo_TLOS_M');
+        
+
+          AddLogo_TLOS_M.addEventListener('click', async () => {
+          const tokenAddress = '0xD102cE6A4dB07D247fcc28F366A623Df0938CA9E';
+          const tokenSymbol = 'TLOS';
+          const tokenDecimals = 18;
+          const tokenImage = 'https://raw.githubusercontent.com/telosnetwork/images/master/logos_2021/Symbol%202.svg';
+        
+          try {
+            // wasAdded is a boolean. Like any RPC method, an error may be thrown.
+            const wasAdded = await ethereum.request({
+              method: 'wallet_watchAsset',
+              params: {
+                type: 'ERC20', // Initially only supports ERC20, but eventually more!
+                options: {
+                  address: tokenAddress, // The address that the token is at.
+                  symbol: tokenSymbol, // A ticker symbol or shorthand, up to 5 chars.
+                  decimals: tokenDecimals, // The number of decimals in the token
+                  image: tokenImage, // A string url of the token logo
+                },
+              },
+            });
+        
+            if (wasAdded) {
+              console.log('Thanks for your interest!');
+            } else {
+              console.log('Your loss!');
+            }
+          } catch (error) {
+            console.log(error);
+          }
+        });
+      }
+
+
+// _________________________________________________________________________________________________________
+
+      // TELOS EVM Testnet
+      // Add Chain
 
         function connectToTELOSEVM_M() {
             if (typeof window.ethereum == 'undefined') {
@@ -62,6 +176,7 @@ function connectToEOSEVM_T() {
                 const chain = {
                     chainId: "0x28",
                     chainName: "TelosEVM",
+                    iconUrls: ["https://www.teloscan.io/img/evm_logo.b258c0a0.png"],
                     nativeCurrency: {
                         name: "TELOS",
                         symbol: "TELOS",
@@ -75,166 +190,33 @@ function connectToEOSEVM_T() {
                     params: [chain],
                 }).catch((error) => {
                     console.log(error);
-                    alert("An error has occurred. Please make sure MetaMask is ready to go. Also you may already have TelosEVM configured. See error in log");
+                    alert("An error has occurred. Please make sure MetaMask is ready to go. Also you may already have TelosEVM configured.");
                 });
             }
         }
 
-
-// BG Animation
-
-        /*--------------------
-Vars
---------------------*/
-const deg = (a) => Math.PI / 180 * a
-const rand = (v1, v2) => Math.floor(v1 + Math.random() * (v2 - v1))
-const opt = {
-  particles: window.width / 500 ? 1000 : 500,
-  noiseScale: 0.009,
-  angle: Math.PI / 180 * -90,
-  h1: rand(0, 360),
-  h2: rand(0, 360),
-  s1: rand(20, 90),
-  s2: rand(20, 90),
-  l1: rand(30, 80),
-  l2: rand(30, 80),
-  strokeWeight: 1.2,
-  tail: 82,
-}
-const Particles = []
-let time = 0
-document.body.addEventListener('click', () => {
-  opt.h1 = rand(0, 360)
-  opt.h2 = rand(0, 360)
-  opt.s1 = rand(20, 90)
-  opt.s2 = rand(20, 90)
-  opt.l1 = rand(30, 80)
-  opt.l2 = rand(30, 80)
-  opt.angle += deg(random(60, 60)) * (Math.random() > .5 ? 1 : -1)
-  
-  for (let p of Particles) {
-    p.randomize()
-  }
-})
+        // Add Token Logo
 
 
-/*--------------------
-Particle
---------------------*/
-class Particle {
-  constructor(x, y) {
-    this.x = x
-    this.y = y
-    this.lx = x
-    this.ly = y
-    this.vx = 0
-    this.vy = 0
-    this.ax = 0
-    this.ay = 0
-    this.hueSemen = Math.random()
-    this.hue = this.hueSemen > .5 ? 20 + opt.h1 : 20 + opt.h2
-    this.sat = this.hueSemen > .5 ? opt.s1 : opt.s2
-    this.light = this.hueSemen > .5 ? opt.l1 : opt.l2
-    this.maxSpeed = this.hueSemen > .5 ? 3 : 2
-  }
-  
-  randomize() {
-    this.hueSemen = Math.random()
-    this.hue = this.hueSemen > .5 ? 20 + opt.h1 : 20 + opt.h2
-    this.sat = this.hueSemen > .5 ? opt.s1 : opt.s2
-    this.light = this.hueSemen > .5 ? opt.l1 : opt.l2
-    this.maxSpeed = this.hueSemen > .5 ? 3 : 2
-  }
-  
-  update() {
-    this.follow()
-    
-    this.vx += this.ax
-    this.vy += this.ay
-    
-    var p = Math.sqrt(this.vx * this.vx + this.vy * this.vy)
-    var a = Math.atan2(this.vy, this.vx)
-    var m = Math.min(this.maxSpeed, p)
-    this.vx = Math.cos(a) * m
-    this.vy = Math.sin(a) * m
-    
-    this.x += this.vx
-    this.y += this.vy
-    this.ax = 0
-    this.ay = 0
-    
-    this.edges()
-  }
-  
-  follow() {
-    let angle = (noise(this.x * opt.noiseScale, this.y * opt.noiseScale, time * opt.noiseScale)) * Math.PI * 0.5 + opt.angle
-    
-    this.ax += Math.cos(angle)
-    this.ay += Math.sin(angle)
-    
-  }
-  
-  updatePrev() {
-    this.lx = this.x
-    this.ly = this.y
-  }
-  
-  edges() {
-    if (this.x < 0) {
-      this.x = width
-      this.updatePrev()
-    }
-    if (this.x > width) {
-      this.x = 0
-      this.updatePrev()
-    }
-    if (this.y < 0) {
-      this.y = height
-      this.updatePrev()
-    }
-    if (this.y > height) {
-      this.y = 0
-      this.updatePrev()
-    }
-  }
-  
-  render () {
-    stroke(`hsla(${this.hue}, ${this.sat}%, ${this.light}%, .5)`)
-    line(this.x, this.y, this.lx, this.ly)
-    this.updatePrev()
-  }
-}
+
+        // |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+// WAX EVM Mainnet
+// Add Chain
+
+function connectToWAXEVM_M() {
+  console.log("Coming Soon!");
+  }     
+
+// Add Token Logo
 
 
-/*--------------------
-Setup
---------------------*/
-function setup() {
-  createCanvas(windowWidth, windowHeight)
-  for (let i = 0; i < opt.particles; i++) {
-    Particles.push(new Particle(Math.random() * width, Math.random() * height))
-  }
-  strokeWeight(opt.strokeWeight)
-}
+// _________________________________________________________________________________________________________
 
 
-/*--------------------
-Draw
---------------------*/
-function draw() {
-  time++
-  background(0, 100 - opt.tail)
-  
-  for (let p of Particles) {
-    p.update()
-    p.render()
-  }
-}
+// WAX EVM Testnet
+function connectToWAXEVM_T() {
+  console.log("Coming Soon!");
+  } 
 
-
-/*--------------------
-Resize
---------------------*/
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight)
-}
+// Add Chain

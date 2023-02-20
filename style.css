@@ -1,4 +1,4 @@
- * {
+        *{
             margin: 0;
             padding: 0;
             text-decoration: none;
@@ -9,32 +9,29 @@
             width: 20rem;
             padding-top: 20px;
             padding-left: 30px;
-
-
-        }
+            }
 
         body{
             /* background-color: #c8c8c8; */
             /* height: 200px; */
-            background-color: rgb(171, 171, 171); /* For browsers that do not support gradients */
-            background-image: linear-gradient(to bottom right, #3a8474,  #067d68);
+            background-color: rgb(0, 0, 0); /* For browsers that do not support gradients */
+            /* background-image: linear-gradient(to bottom right, #3a8474,  #067d68); */
               }
 
 
-
-
-        div.chain-main{
-            /* border: 1px solid black; */
+        div.chain-main#telos_main{
+            border: 1px solid black;
             /* margin: 0.45rem; */
             text-align: center;
-        }
+            background-color: red;
+            }
 
         div.chain-table{
             /* border: 1px solid black; */
             display: inline-block;
             margin: 0.45rem;
             text-align: center;
-        }
+            }
 
         div.chain-table-elements{
             /* border: rgb(8, 252, 138) solid 3px; */
@@ -43,12 +40,11 @@
             vertical-align: middle;
             margin: 10px;
             /* text-align: left; */
-
-        }
+            }
 
         div.chain-table-elements.h2{
             text-align: left;
-        }
+            }
 
 
         h1,h2,
@@ -56,7 +52,7 @@
             text-align: center;
             margin: 1em 0 1em 0;
             color: white;
-        }
+            }
     
         button {
             width: 120px;
@@ -67,11 +63,13 @@
             color: blacks;
             font-weight: 700;
             border-radius: 3px;
-        }
+         }
 
 
+        
         /* ACTIVE */
-        .button.green {
+
+        /* .button.green {
             background: #37fb44;
             background: -webkit-gradient(linear, 0 0, 0 bottom, from(#656565), to(#444));
             background: -moz-linear-gradient(#656565, #37fb44);
@@ -97,11 +95,11 @@
             background: -moz-linear-gradient(#474747, #37fb44);
             background: linear-gradient(#474747, #37fb44);
             border: solid 1px #2f2f2f;
-            box-shadow: inset 0 10px 15px 0 #37fb44; }
+            box-shadow: inset 0 10px 15px 0 #37fb44; } */
 
-
+            
             /* INACTIVE */
-            .button.black {
+            /* .button.black {
                 background: #303030;
                 background: -webkit-gradient(linear, 0 0, 0 bottom, from(#656565), to(#444));
                 background: -moz-linear-gradient(#656565, #444);
@@ -127,4 +125,54 @@
                 background: -moz-linear-gradient(#474747, #444);
                 background: linear-gradient(#474747, #444);
                 border: solid 1px #2f2f2f;
-                box-shadow: inset 0 10px 15px 0 #3e3e3e; }
+                box-shadow: inset 0 10px 15px 0 #3e3e3e; } */
+
+
+
+            /* ACTIVE BUTTON*/
+            .button.green{
+                width: 180px;
+                height: 60px;
+                cursor: pointer;
+                background: transparent;
+                border: 1px solid #c7ffb8;
+                outline: none;
+                transition: 0.5s ease-in-out;
+            }
+
+
+            .button.green:hover {
+                transition: 1s ease-in-out;
+                background: #06cc76;
+            }
+
+
+            .button.green span {
+                color: white;
+                font-size: 18px;
+                font-weight: 100;
+            }
+
+            /* INACTIVE BUTTON*/
+            .button.black {
+                width: 180px;
+                height: 60px;
+                cursor: pointer;
+                background: transparent;
+                border: 1px solid #a2a2a2;
+                outline: none;
+                transition: 0.5s ease-in-out;
+            }
+            
+            
+            .button.black:hover {
+                transition: 1s ease-in-out;
+                background: #818181;
+            }
+            
+            
+            .button.black  span {
+                color: white;
+                font-size: 18px;
+                font-weight: 100;
+            }

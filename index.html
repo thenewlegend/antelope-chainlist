@@ -2,58 +2,76 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en-US">
 <head profile="http://www.w3.org/2005/10/profile">
-    <link rel="icon" type="image/png" href="images\Antelope-Favicon-Logo-Dark.png">
+    <link rel="icon" type="image/png" href="https:\\assets.chainlist-antelope.tech\images\Antelope-Favicon-Logo-Dark.png">
     <title>Antelope EVM Chainlist</title>
+    <!-- <link rel="stylesheet" type="text/css" href="https:\\assets.chainlist-antelope.tech\css\style.css"> -->
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
   <script src="app.js"></script>
 
-  <div><img src="images\Antelope-Header-Logo.png" alt="Antelope Logo" id="banner"></div>
+  <div><img src="https://assets.chainlist-antelope.tech/images/Antelope-Header-Logo.png" alt="Antelope Logo" id="banner"></div>
   
 
   <div>
     <h2>Easily add Antelope EVM chains to MetaMask (via <a href="https://eips.ethereum.org/EIPS/eip-3085">EIP-3085</a>)</h2>
   </div>
 
+  <div>
+    <p>A comprehensive list of Antelope Ethereum Virtual Machine (Antelope EVM) networks has been compiled for user reference. With this information, individuals can easily connect their wallets  to the appropriate Chain ID thereby ensuring seamless connectivity to the correct Antelope EVM networks, both mainnets and testnets.</p>
+  </div>
+
+  <!-- <a href="#" class="button">Hover me</a> -->
   
   <!-- EOS Chain -->
-  <div class="main-chain">
-    <div class="chain-table">
-      <div class="chain-table-elements"><h2>EOS EVM Mainnet</h2><span>one click Add to MetaMask</span></div>
-      <div class="chain-table-elements"><button class="button black" onclick="connectToEOSEVM_M()">Coming Soon!</button></div>
+    <!-- Mainnet -->
+    <div class="main-chain">
+      <div class="chain-table">
+        <div class="chain-table-elements"><h2>EOS EVM Mainnet</h2><span>one click Add to MetaMask</span></div>
+        <div class="chain-table-elements"><button button class="button black" onclick="connectToEOSEVM_M()"><span>COMING SOON!</span></button></div>
+        <!-- <div class="chain-table-elements" ><button button class="button black" id="AddLogo_EOS_M"><span>Add Token Logo</span></button></div> -->
     </div>
   
-    <div class="chain-table">
+    <!-- Testnet -->
+  <div class="chain-table">
       <div class="chain-table-elements"><h2>EOS EVM Testnet </h2><span>one click Add to MetaMask</span></div>
-      <div class="chain-table-elements"><button class="button green" onclick="connectToEOSEVM_T()">Add EOS EVM T</button></div>
-    </div>
+      <div class="chain-table-elements"><button button class="button green" onclick="connectToEOSEVM_T()"><span>Add EOS EVM T</span></button></div>
+      <!-- <div class="chain-table-elements" ><button class="button green" id="AddLogo_EOS_T"><span>Add Token Logo</span></button></div> -->
   </div>
+
 
     <!-- TELOS Chain -->
-  <div class="main-chain">
+        <!-- Mainnet -->
+  <div class="main-chain" id="eos_main">
     <div class="chain-table">
       <div class="chain-table-elements"><h2>TELOS EVM Mainnet</h2><span>one click Add to MetaMask</span></div>
-      <div class="chain-table-elements"><button class="button green" onclick="connectToTELOSEVM_M()">Add TELOS EVM M</button></div>
+      <div class="chain-table-elements"><button class="button green" onclick="connectToTELOSEVM_M()"><span>Add TELOS EVM M</span></button></div>
+      <!-- <div class="chain-table-elements" ><button class="button black" id="AddLogo_TLOS_M"><span>Add Token Logo</span></button></div> -->
   </div>
 
-    <div class="chain-table">
+      <!-- Testnet -->
+    <div class="chain-table" id="telos_main">
       <div class="chain-table-elements"><h2>TELOS EVM Testnet </h2><span>one click Add to MetaMask</span></div>
-      <div class="chain-table-elements"><button class="button green" onclick="connectToTELOSEVM_T()">Add TELOS EVM T</button></div>
+      <div class="chain-table-elements"><button class="button green" onclick="connectToTELOSEVM_T()"><span>Add TELOS EVM T</span></button></div>
+      <!-- <div class="chain-table-elements" ><button class="button black" id="AddLogo_TLOS_T"><span>Add Token Logo</span></button></div> -->
     </div>
   </div>
 
     <!-- WAX Chain -->
-  <div class="main-chain">
+        <!-- Mainnet -->
+  <div class="main-chain" id="wax_main">
     <div class="chain-table">
       <div class="chain-table-elements"><h2>WAX EVM Mainnet</h2><span>one click Add to MetaMask</span></div>
-      <div class="chain-table-elements"><button class="button black" onclick="connectToWAXEVM_M()">Coming Soon!</button></div>
+      <div class="chain-table-elements"><button class="button black" onclick="connectToWAXEVM_M()"><span>COMING SOON!</span></button></div>
+      <!-- <div class="chain-table-elements" ><button class="button black" id="AddLogo_WAX_M"><span>Add Token Logo</span></button></div> -->
     </div>
 
+        <!-- Testnet -->
     <div class="chain-table">
       <div class="chain-table-elements"><h2>WAX EVM Testnet </h2><span>one click Add to MetaMask</span></div>
-      <div class="chain-table-elements"><button class="button black" onclick="connectToWAXEVM_T()">Coming Soon!</button></div>
+      <div class="chain-table-elements"><button class="button black" onclick="connectToWAXEVM_T()"><span>COMING SOON!</span></button></div>
+      <!-- <div class="chain-table-elements" ><button class="button black" id="AddLogo_WAX_T"><span>Add Token Logo</span></button></div> -->
     </div>
   </div>
 
