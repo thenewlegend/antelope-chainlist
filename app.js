@@ -91,6 +91,9 @@ function connectToEOSEVM_T() {
 
 // |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+      // TELOS EVM Mainnet
+      // Add Chain
+
       function connectToTELOSEVM_T() {
             if (typeof window.ethereum == 'undefined') {
                 alert('MetaMask is not installed!');
@@ -120,8 +123,49 @@ function connectToEOSEVM_T() {
         }
 
 
+        // Add Token Logo
+
+        window.onload = function () {
+          const AddLogo_TLOS_M = document.getElementById('AddLogo_TLOS_M');
+        
+
+          AddLogo_TLOS_M.addEventListener('click', async () => {
+          const tokenAddress = '0xD102cE6A4dB07D247fcc28F366A623Df0938CA9E';
+          const tokenSymbol = 'TLOS';
+          const tokenDecimals = 18;
+          const tokenImage = 'https://raw.githubusercontent.com/telosnetwork/images/master/logos_2021/Symbol%202.svg';
+        
+          try {
+            // wasAdded is a boolean. Like any RPC method, an error may be thrown.
+            const wasAdded = await ethereum.request({
+              method: 'wallet_watchAsset',
+              params: {
+                type: 'ERC20', // Initially only supports ERC20, but eventually more!
+                options: {
+                  address: tokenAddress, // The address that the token is at.
+                  symbol: tokenSymbol, // A ticker symbol or shorthand, up to 5 chars.
+                  decimals: tokenDecimals, // The number of decimals in the token
+                  image: tokenImage, // A string url of the token logo
+                },
+              },
+            });
+        
+            if (wasAdded) {
+              console.log('Thanks for your interest!');
+            } else {
+              console.log('Your loss!');
+            }
+          } catch (error) {
+            console.log(error);
+          }
+        });
+      }
+
+
 // _________________________________________________________________________________________________________
 
+      // TELOS EVM Testnet
+      // Add Chain
 
         function connectToTELOSEVM_M() {
             if (typeof window.ethereum == 'undefined') {
@@ -150,6 +194,9 @@ function connectToEOSEVM_T() {
                 });
             }
         }
+
+        // Add Token Logo
+
 
 
         // |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
