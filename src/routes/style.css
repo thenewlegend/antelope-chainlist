@@ -1,0 +1,227 @@
+:root {
+	--primary-color: #001f3f;
+	--secondary-color: #0f4c81;
+	--background-color: #84bef9;
+	--card-text-color: #e5e5e5;
+	--text-color: #171717;
+	--gradient-color1: #d88cf8;
+	--gradient-color2: #5db7f4;
+	--button-gradient-color1: #1dcef6;
+	--button-gradient-color2: #054270;
+	--box-shadow-color: rgba(0, 0, 0, 0.2);
+	--box-shadow-hover-color: rgba(0, 0, 0, 0.3);
+	--surface-color: rgba(255, 253, 253, 0.766);
+}
+.dark-mode {
+	/* Define dark mode colors */
+	--primary-color: #1a1a1a;
+	--secondary-color: #242424;
+	--background-color: #27374d;
+	--card-text-color: #f5f5f5;
+	--text-color: #e8e8e8;
+	--gradient-color1: #262626;
+	--gradient-color2: #393939;
+	--button-gradient-color1: #505050;
+	--button-gradient-color2: #6b6b6b;
+	--box-shadow-color: rgba(255, 255, 255, 0.2);
+	--box-shadow-hover-color: rgba(255, 255, 255, 0.3);
+	--surface-color: rgba(176, 176, 176, 0.933);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style-type: none;
+
+	-webkit-user-select: none; /* Safari 3.1+ */
+  	-moz-user-select: none; /* Firefox 2+ */
+  	-ms-user-select: none; /* IE 10+ */
+  	user-select: none; /* Standard syntax */
+
+	::-webkit-scrollbar {
+		width: 5px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background-color: #888;
+		border-radius: 5px;
+	}
+
+	::-webkit-scrollbar-track {
+		background-color: #f1f1f1;
+	}
+
+	/* For Firefox */
+	scrollbar-width: thin;
+	scrollbar-color: #888 #f1f1f1;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--background-color);
+	color: var(--text-color);
+}
+
+#card-template {
+	display: none;
+}
+
+.social {
+	width: 45px;
+	height: 45px;
+	text-align: center;
+	border-radius: 50%;
+	margin: 0 4px 10px;
+	flex: 1;
+	transition: all 0.3s ease;
+	overflow: hidden;
+}
+
+.social:hover {
+	transform: translateY(-8px);
+	cursor: pointer;
+}
+
+.social:not(:hover) {
+	transform: translateY(+3px);
+}
+
+.social img {
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.info,
+.card-content,
+.card {
+	margin: 0;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0.5rem;
+	padding: 0.5rem;
+	transition: transform 0.4s ease-out;
+	transform: scale(0);
+	background-image: linear-gradient(
+		to bottom right,
+		var(--gradient-color1),
+		var(--gradient-color2)
+	);
+}
+
+.card.show {
+	transform: scale(1);
+}
+
+.card img {
+	transition: all 0.3s ease;
+}
+
+.card img:hover {
+	transform: scale(1.05);
+	box-shadow: 0px 5px 10px var(--box-shadow-color);
+}
+
+.title {
+	margin: 20px 0;
+}
+
+.title button {
+	display: inline-block;
+	padding: 12px 24px;
+	background: linear-gradient(
+		to bottom,
+		var(--button-gradient-color1) 0%,
+		var(--button-gradient-color2) 100%
+	);
+	color: var(--card-text-color);
+	width: 105px;
+	height: 55px;
+	font-size: 16px;
+	text-align: center;
+	border-radius: 50px;
+	border: none;
+	transition: all 0.5s ease;
+	cursor: pointer;
+	box-shadow: 0px 5px 10px var(--box-shadow-color);
+}
+
+.title button:hover {
+	transform: scale(1.2);
+	box-shadow: 0px 8px 15px var(--box-shadow-hover-color);
+}
+
+.title button:active {
+	transform: scale(0.8);
+	box-shadow: 0px 8px 15px var(--box-shadow-hover-color);
+}
+
+.nav-item {
+	font-size: 1rem;
+	font-weight: bold;
+	color: var(--text-color);
+	text-transform: uppercase;
+	padding: 0.4rem;
+	border-radius: 4px;
+	transition: all 0.01s ease-in-out;
+}
+
+a.nav-item {
+	color: var(--text-color);
+	text-align: center;
+}
+
+.nav-item:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.nav-item:active {
+	background-color: rgba(0, 0, 0, 0.2);
+	border-right: rgba(0, 0, 0, 0.1) 2px solid;
+}
+
+#main_title {
+	color: var(--text-color);
+}
+
+.logo-chain {
+	background-color: var(--surface-color);
+}
+
+.chain-id {
+	color: var(--light-color);
+}
+
+.symbol {
+	color: var(--accent-color);
+}
+
+.connect-to-evm {
+	background: linear-gradient(
+		to bottom,
+		var(--button-gradient-color1) 0%,
+		var(--button-gradient-color2) 100%
+	);
+	color: var(--card-text-color);
+}
+
+.description {
+	color: var(--text-color);
+}
+
+.chain {
+	background-image: linear-gradient(
+		to bottom right,
+		var(--gradient-color1),
+		var(--gradient-color2)
+	);
+}

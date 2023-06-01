@@ -1,0 +1,32 @@
+[
+	{
+		"Chain": "EOS",
+		"ChainData": {
+			"ChainId": "0x4571",
+			"ChainName": "EOSEVM Mainnet",
+			"Name": "EOS",
+			"Symbol": "EOS",
+			"Decimals": 18,
+			"Image": "https://rb.gy/fjx0z",
+			"SymbolImage": "https://rb.gy/fjx0z",
+			"Color": "#316650",
+			"RPCUrls": ["https://api.evm.eosnetwork.com"],
+			"BlockExplorerUrls": ["https://explorer.evm.eosnetwork.com"]
+		}
+	},
+	{
+		"Chain": "TELOS",
+		"ChainData": {
+			"ChainId": "0x28",
+			"ChainName": "TELOS Mainnet",
+			"Name": "TLOS",
+			"Symbol": "TLOS",
+			"Decimals": 18,
+			"Image": "hhttps://assets-global.website-files.com/60ae1fd65f7b76f18ddd0bec/61044a5f70f5bbeb24b995ea_Symbol%202%402x.png",
+			"SymbolImage": "https://assets-global.website-files.com/60ae1fd65f7b76f18ddd0bec/61044a5f70f5bbeb24b995ea_Symbol%202%402x.png",
+			"Color": "#316650",
+			"RPCUrls": ["https://mainnet.telos.net/evm"],
+			"BlockExplorerUrls": ["https://teloscan.io"]
+		}
+	}
+]
